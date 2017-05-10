@@ -1,0 +1,10 @@
+<h2>Restaurants</h2>
+<%= link_to "Add a new restaurant", new_restaurant_path %>
+<div class="row">
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-md-4">
+      <h3><%= link_to restaurant.name, restaurant_path(restaurant) %> </h3>
+      <p> 🍝 <%= restaurant.category.capitalize %> - 🌍 <%= restaurant.address %></p>
+    </div>
+  <% end %>
+</div>
